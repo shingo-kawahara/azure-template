@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourceName": {
+            "value": "[Your AKS Cluster Name]"
+        },
+        "dnsPrefix": {
+            "value": "[Your AKS DNS Prefix]"
+        },
+        "osDiskSizeGB": {
+            "value": 100
+        },
+        "agentCount": {
+            "value": 2
+        },
+        "agentVMSize": {
+            "value": "Standard_B2s"
+        },
+        "osType": {
+            "value": "Linux"
+        },
+        "kubernetesVersion": {
+            "value": "1.13.5"
+        },
+        "enableHttpApplicationRouting": {
+            "value": false
+        },
+        "networkPlugin": {
+            "value": "azure"
+        },
+        "maxPods": {
+            "value": 30
+        },
+        "enableRBAC": {
+            "value": true
+        },
+        "existingVirtualNetworkName": {
+            "value": "[Your vNet Name]"
+        },
+        "existingVirtualNetworkResourceGroup": {
+            "value": "[Your vNet Resource Group Name]"
+        },
+        "existingSubnetName": {
+            "value": "[Your vNet Subnet Name]"
+        },
+        "serviceCidr": {
+            "value": "192.168.100.0/24"
+        },
+        "dnsServiceIP": {
+            "value": "192.168.100.10"
+        },
+        "dockerBridgeCidr": {
+            "value": "192.168.101.1/24"
+        },
+        "environmentTag": {
+            "value": "prod"
+        },
+        "serviceTag": {
+            "value": "[Your Service Name]"
+        }
+    }
+}
